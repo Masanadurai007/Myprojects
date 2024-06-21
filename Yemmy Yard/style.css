@@ -1,0 +1,318 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(yummyyardimgs/foodbg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.navbar {
+  background: transparent;
+  font-family: sans-serif;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navdiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.logo a {
+  font-size: 30px;
+  font-weight: bold;
+  color: orange;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+li a {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 25px;
+}
+.navdiv ul li a::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: orange;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navdiv ul li a:active::after,
+.navdiv ul li a:hover::after {
+  width: 80%;
+}
+
+.dashboard {
+  margin: 150px 150px;
+  height: 100%;
+  width: 50%;
+  background: transparent;
+  color: white;
+}
+.dashboard p {
+  font-size: 40px;
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 0px;
+}
+.dashboard p.p1 {
+  color: orange;
+}
+.dashboard h1 {
+  font-size: 100px;
+  font-weight: bold;
+}
+.dashboard button {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 5px 6px;
+  color: white;
+  margin: 10px;
+  font-weight: bold;
+}
+.dashboard button:hover {
+  background: orange;
+  color: black;
+  transform: scale(0.9);
+}
+.image {
+  position: absolute;
+  top: 30px;
+  right: 190px;
+  animation: float 3s linear infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(3rem);
+  }
+}
+/* Most Popular Foods */
+.popular {
+  background: black;
+  margin-top: 6vh;
+}
+.heading {
+  background: orange;
+  color: black;
+  font-size: 45px;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+  font-family: "Kaushan Script", cursive;
+}
+.heading span {
+  color: red;
+}
+.popular .box-container {
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+.popular .box-container .box {
+  display: grid;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  border: 2px solid orange;
+  cursor: pointer;
+  border-radius: 1px;
+}
+
+.popular .box-container .box img {
+  height: cover;
+  object-fit: cover;
+  width: cover;
+  border-radius: 10px;
+  transition: all 1.1s;
+}
+
+.popular .box-container .box .price {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background: red;
+  color: white;
+  font-size: 30px;
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+.popular .box-container .box h3 {
+  color: orange;
+  font-size: 40px;
+  padding: 10px;
+  text-align: center;
+}
+.popular .box-container .box .stars i {
+  color: gold;
+  font-size: 40px;
+  padding: 10px;
+}
+.popular .box-container .box button {
+  background: red;
+  padding: 10px;
+  border-radius: 30px;
+  color: white;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  width: 40%;
+  position: absolute;
+  bottom: 10px;
+  left: 28%;
+  cursor: pointer;
+}
+.popular .box-container button:hover {
+  background: orange;
+  color: black;
+  transform: scale(0.9);
+  border: 2px solid white;
+}
+/* Review */
+.bg {
+  height: 100vh;
+  width: 100%;
+
+  margin-top: -40px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(yummyyardimgs/restuarantbg.avif);
+}
+
+.bg .hi {
+  font-size: 45px;
+  color: orange;
+  font-family: "Kaushan Script", cursive;
+  font-style: italic;
+  font-weight: bold;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.wrapper {
+  margin-top: 60px;
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15%;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  padding: 2rem 1rem;
+  background-color: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out;
+  border: 3px solid orange;
+  justify-content: space-evenly;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card:hover {
+  transform: translateY(20px);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 176, 155, 0.5),
+    rgba(150, 201, 61, 1)
+  );
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+}
+.card:hover:before {
+  opacity: 1;
+}
+.card .info {
+  position: relative;
+  z-index: 3;
+  color: black;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+.card:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.card .info h1 {
+  margin: 0;
+}
+.card .info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.card .info .button {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: orange;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.card .info .button :hover {
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+.contactus .text {
+  color: orange;
+  padding-top: 30px;
+  background: black;
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+.contactus h3 {
+  background: black;
+  color: white;
+  font-size: 20px;
+  font-family: serif;
+  padding: 10px;
+  padding-left: 20px;
+}
